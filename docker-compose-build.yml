@@ -1,0 +1,10 @@
+version: '2'
+services:
+    api:
+        build:
+            context: ./commute-api
+        ports:
+            - "81:5000"
+        environment:
+            GOOGLE_MAPS_API_KEY: <GOOGLE_MAPS_API_KEY>
+        image: derekbekoe/commute:0.1
