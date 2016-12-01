@@ -11,7 +11,7 @@ input[type=text].launch, span.launch {
     border: none;
     border-bottom: solid 1px #ffffff;
     transition: border 0.3s;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0);
     display: block;
 }
 input[type=text]:focus::-webkit-input-placeholder.launch {
@@ -29,6 +29,10 @@ input[type=text]:focus:-ms-input-placeholder.launch {
 input[type=text]:focus.launch {
     color: #ffffff;
     border-bottom: solid 2px #ffffff;
+}
+
+input[type=text]:hover.launch {
+    background-color: rgba(255,255,255,0.1);
 }
 
 span.launch {

@@ -45,7 +45,17 @@ def travel_time():
     }
     return jsonify(data)
 
-# TODO Auto complete on place names using google api
+@app.route('/place-autocomplete', methods=['GET'])
+@cross_origin()
+def place_complete():
+    query = request.args.get('query')
+    request_fmt = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query={}&key={}'.format(query, GOOGLE_MAPS_API_KEY)
+    r = requests.get(request_fmt).json()
+    places = [p['formatted_address'] for p in r['results']]
+    data = {
+        'places': places
+    }
+    return jsonify(data)
 
 if __name__ == "__main__":
     app.run()
