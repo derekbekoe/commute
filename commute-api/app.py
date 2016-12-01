@@ -45,5 +45,7 @@ def travel_time():
     }
     return jsonify(data)
 
+# TODO Auto complete on place names using google api
+
 if __name__ == "__main__":
     app.run()
