@@ -2,8 +2,8 @@ import os
 import logging
 import requests
 import time
-from flask import Flask, CORS, jsonify, request
-from flask_cors import cross_origin
+from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 
 VERSION = '0.1'
 
