@@ -6,7 +6,7 @@
     https://developers.google.com/maps/
 
 For the API server the GOOGLE_MAPS_API_KEY env var needs to be set.
-
+For the Frontend server the COMMUTE_API env var needs to be set.
 
 ## Creating with az
 

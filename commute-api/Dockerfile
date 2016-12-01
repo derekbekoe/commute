@@ -1,6 +1,6 @@
 # BUILD LIKE THIS
 # sudo docker build -t <image_name>:<version> .
-# sudo docker run -p <host_ip>:5000 -e GOOGLE_MAPS_API_KEY=<GOOGLE_MAPS_API_KEY> <image_name>:<version>
+# sudo docker run -d -p <host_ip>:5000 -e GOOGLE_MAPS_API_KEY=<GOOGLE_MAPS_API_KEY> <image_name>:<version>
 
 FROM python:3.5
 

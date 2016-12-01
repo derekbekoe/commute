@@ -5,4 +5,10 @@ services:
             - "81:5000"
         environment:
             GOOGLE_MAPS_API_KEY: <GOOGLE_MAPS_API_KEY>
-        image: derekbekoe/commute:0.1
+        image: derekbekoe/commute-api:0.1
+    frontend:
+        ports:
+            - "80:80"
+        environment:
+            COMMUTE_API: <COMMUTE_API>
+        image: derekbekoe/commute-frontend:0.1
