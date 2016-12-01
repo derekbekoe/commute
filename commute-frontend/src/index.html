@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Commute</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-car"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Commute</h1>
+								<p><!--[-->Live traffic information for your journey home<!--]--></p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#launch">Enter</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+							<article id="launch">
+								<input name="origin" class="launch" id="custom-origin" type="text" placeholder="Where are you leaving from?" autocomplete="on">
+								<input name="destination" class="launch" id="custom-destination" type="text" placeholder="Where are you going to?" autocomplete="on">
+								<button type="button" class="launch" id="go">Go</button>
+							</article>
+
+							<article id="travel">
+								<span class="launch place" id="travel-origin"></span>
+								<span class="launch to">to</span>
+								<span class="launch place" id="travel-destination"></span>
+								<span class="launch time" id="travel-time"></span>
+								<!--<span class="launch last-updated">Updated 1 minute ago</span>-->
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; <a href="https://derekbekoe.com" target="_blank">Derek Bekoe</a> | Made with &#10084; in Seattle</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg" style="background-image: url('https://source.unsplash.com/featured/1920x1080/?traffic')"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
+
+	</body>
+</html>

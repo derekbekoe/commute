@@ -2,12 +2,15 @@ import os
 import logging
 import requests
 import time
-from flask import Flask, jsonify, request
+from flask import Flask, CORS, jsonify, request
 from flask_cors import cross_origin
 
 VERSION = '0.1'
 
 app = Flask(__name__)
+
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 GOOGLE_MAPS_API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
 

@@ -1,0 +1,67 @@
+input[type=text].launch, span.launch {
+    padding: 5px 10px 5px 10px;
+    height: 50px;
+    width: 50%;
+    min-width: 210px;
+    outline: none;
+    margin: 0 auto 50px auto;
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    border-bottom: solid 1px #ffffff;
+    transition: border 0.3s;
+    background-color: rgba(0,0,0,0);
+    display: block;
+}
+input[type=text]:focus::-webkit-input-placeholder.launch {
+    color: transparent;
+}
+input[type=text]:focus:-moz-placeholder.launch {
+    color: transparent;
+}
+input[type=text]:focus::-moz-placeholder.launch {
+    color: transparent;
+}
+input[type=text]:focus:-ms-input-placeholder.launch {
+    color: transparent;
+}
+input[type=text]:focus.launch {
+    color: #ffffff;
+    border-bottom: solid 2px #ffffff;
+}
+
+span.launch {
+    border-bottom: 0;
+}
+
+span.launch.to {
+    margin: 10px auto;
+}
+
+span.launch.place {
+    font-size: 30px;
+    margin: 25px auto;
+}
+
+span.launch.time {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 25px auto;
+}
+
+span.launch.last-updated {
+    font-size: 12px;
+    margin: 10px auto;
+}
+
+button.launch {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+button:hover.launch {
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
