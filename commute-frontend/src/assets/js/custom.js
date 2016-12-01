@@ -22,8 +22,7 @@ if (Notify.needsPermission && Notify.isSupported()) {
 }
 
 function checkTravelTime(travelTime, travelOrigin, travelDestination) {
-    $.get( "http://40.83.187.34:81" + "/travel-time", {origin: localStorage.origin, destination: localStorage.destination}, function( data ) {
-    // $.get( "COMMUTE_API" + "/travel-time", {origin: localStorage.origin, destination: localStorage.destination}, function( data ) {
+    $.get( "COMMUTE_API" + "/travel-time", {origin: localStorage.origin, destination: localStorage.destination}, function( data ) {
         localStorage.origin = data.origin_address
         localStorage.destination = data.destination_address
         travelOrigin.text(localStorage.origin)
@@ -38,8 +37,7 @@ function checkTravelTime(travelTime, travelOrigin, travelDestination) {
 }
 
 function placeAutocompleteList(inputElement, datalist) {
-    $.get( "http://40.83.187.34:81" + "/place-autocomplete", {query: inputElement.val()} , function(data) {
-    // $.get( "COMMUTE_API" + "/place-autocomplete", {query: inputElement.val()} , function(data) {
+    $.get( "COMMUTE_API" + "/place-autocomplete", {query: inputElement.val()} , function(data) {
         datalist.html('');
         var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
         for (i=0; i<data.places.length; i++){
