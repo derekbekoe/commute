@@ -7,6 +7,7 @@ RUN pip install gunicorn Flask flask-cors requests
 
 ADD app.py /
 
+ENV FLASK_DEBUG 1
 ENV FLASK_APP app.py
 
 CMD gunicorn -w 10 -b 0.0.0.0:5000 app:app

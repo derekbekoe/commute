@@ -50,7 +50,7 @@
 								</datalist>
 								<input name="origin" class="launch" id="custom-origin" type="text" placeholder="Where are you leaving from?" autocomplete="on" list="origin-datalist">
 								<input name="destination" class="launch" id="custom-destination" type="text" placeholder="Where are you going to?" autocomplete="on" list="destination-datalist">
-								<!--TODO HTML5 Notifications if time passes X minutes (specified by user)-->
+								<input name="notify-me" class="launch" id="custom-notify-me" type="number" placeholder="Minutes for notification" autocomplete="off">
 								<button type="button" class="launch" id="go">Go</button>
 							</article>
 
@@ -59,7 +59,8 @@
 								<span class="launch to">to</span>
 								<span class="launch place" id="travel-destination"></span>
 								<span class="launch time" id="travel-time"></span>
-								<span class="launch last-updated">Updates every 5 minutes</span>
+								<span class="launch last-updated" id="travel-notify-me"></span>
+								<!--<span class="launch last-updated">Updates every 5 minutes</span>-->
 							</article>
 
 					</div>
@@ -78,6 +79,7 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/notify.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/custom.js"></script>
 			<script>

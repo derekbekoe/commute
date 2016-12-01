@@ -1,4 +1,4 @@
-input[type=text].launch, span.launch {
+input[type=text].launch, input[type=number].launch, span.launch {
     padding: 5px 10px 5px 10px;
     height: 50px;
     width: 50%;
@@ -26,12 +26,12 @@ input[type=text]:focus::-moz-placeholder.launch {
 input[type=text]:focus:-ms-input-placeholder.launch {
     color: transparent;
 }
-input[type=text]:focus.launch {
+input[type=text]:focus.launch, input[type=number]:focus.launch {
     color: #ffffff;
     border-bottom: solid 2px #ffffff;
 }
 
-input[type=text]:hover.launch {
+input[type=text]:hover.launch, input[type=number]:hover.launch {
     background-color: rgba(255,255,255,0.1);
 }
 
