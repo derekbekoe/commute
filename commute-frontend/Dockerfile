@@ -1,5 +1,5 @@
-# sudo docker build -t commute-frontend:1 .
-# sudo docker run -d -p 80:80 -e COMMUTE_API=http://40.83.187.34:81 commute-frontend:1
+# sudo docker build -t commute-frontend:0.1 .
+# sudo docker run -d -p 80:80 -e COMMUTE_API=http://40.83.187.34:81 commute-frontend:0.1
 
 FROM kyma/docker-nginx
 COPY src/ /var/www
