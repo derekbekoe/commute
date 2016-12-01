@@ -27,7 +27,7 @@ def hello():
 def travel_time():
     origin = request.args.get('origin')
     destination = request.args.get('destination')
-    departure_time =  = request.args.get('departure_time', int(time.time()))
+    departure_time = request.args.get('departure_time', int(time.time()))
     request_fmt = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins={}&destinations={}&traffic_model=best_guess&departure_time={}&key={}'.format(origin, destination, departure_time, GOOGLE_MAPS_API_KEY)
     r = requests.get(request_fmt).json()
     no_traffic_element = r['rows'][0]['elements'][0]['duration']
