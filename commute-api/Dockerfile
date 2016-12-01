@@ -1,5 +1,5 @@
 # sudo docker build -t commute-api:0.1 .
-# sudo docker run -d -p 81:5000 -e GOOGLE_MAPS_API_KEY=<GOOGLE_MAPS_API_KEY> commute-api:0.1
+# sudo docker run -d -p 81:5000 -e GOOGLE_MAPS_API_KEY=<GOOGLE_MAPS_API_KEY> -e FLASK_DEBUG=1 commute-api:0.1
 
 FROM python:3.5
 
