@@ -4,5 +4,5 @@
 FROM kyma/docker-nginx
 COPY src/ /var/www
 CMD [ -z "$COMMUTE_API" ] && echo "Need to set COMMUTE_API" && exit 1; \
-    sed 's/COMMUTE_API/'$COMMUTE_API'/' -i /var/www/assets/js/custom.js; \
+    echo "COMMUTE_API = $COMMUTE_API;" >> /var/www/assets/js/custom.js; \
     'nginx'
