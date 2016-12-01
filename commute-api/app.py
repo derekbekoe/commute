@@ -10,6 +10,11 @@ app = Flask(__name__)
 
 GOOGLE_MAPS_API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
 
+if not GOOGLE_MAPS_API_KEY:
+    print("ERROR: No GOOGLE_MAPS_API_KEY specified!")
+    print("Shutting down!")
+    sys.exit(1)
+
 logging.getLogger('flask_cors').level = logging.DEBUG
 
 @app.route("/")

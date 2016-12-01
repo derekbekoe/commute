@@ -5,4 +5,13 @@
 1. Get a Google Maps API Key
     https://developers.google.com/maps/
 
-In the Dockerfile/docker-compose file, replace <GOOGLE_MAPS_API_KEY> with the Google Maps API Key
+For the API server the GOOGLE_MAPS_API_KEY env var needs to be set.
+
+
+## Creating with az
+
+az vm create -g <RG> -n <NAME> --image UbuntuLTS
+az vm open-port -g <RG> -n <NAME>
+ssh <ip-address>
+sudo apt-get update && sudo apt-get install git
+curl -sSL https://get.docker.com/ | sh
