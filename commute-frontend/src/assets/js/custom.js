@@ -77,7 +77,7 @@ $(document).ready(function() {
          localStorage.notifyMe = notifyMe.val()
          travelOrigin.text(localStorage.origin)
          travelDestination.text(localStorage.destination)
-         travelNotifyMe.text('Notify if time exceeds '+localStorage.notifyMe+' minutes')
+         travelNotifyMe.text('Notify me if time exceeds '+localStorage.notifyMe+' minutes')
          document.location.hash = 'travel'
          checkTravelTime(travelTime, travelOrigin, travelDestination)
     });

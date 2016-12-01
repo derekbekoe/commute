@@ -1,11 +1,9 @@
 input[type=text].launch, input[type=number].launch, span.launch {
-    padding: 5px 10px 5px 10px;
-    height: 50px;
-    width: 50%;
-    min-width: 210px;
+    padding: 0.2rem 0.5rem;
+    width: 80%;
     outline: none;
-    margin: 0 auto 50px auto;
-    font-size: 22px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.5em;
     text-align: center;
     color: #ffffff;
     border: none;
@@ -44,19 +42,19 @@ span.launch.to {
 }
 
 span.launch.place {
-    font-size: 30px;
-    margin: 25px auto;
+    font-size: 1.2em;
+    margin: 0.5rem auto;
 }
 
 span.launch.time {
-    font-size: 50px;
+    font-size: 2.5em;
     font-weight: bold;
-    margin: 25px auto;
+    margin: 0.3em auto;
 }
 
 span.launch.last-updated {
-    font-size: 12px;
-    margin: 10px auto;
+    font-size: 0.7em;
+    margin: 0.2em auto;
 }
 
 button.launch {
