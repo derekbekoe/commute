@@ -19,7 +19,10 @@ function checkTravelTime(travelTime, travelOrigin, travelDestination) {
 function placeAutocompleteList(inputElement, datalist) {
     $.get( "http://40.83.187.34:81" + "/place-autocomplete", {query: inputElement.val()} , function(data) {
     // $.get( "COMMUTE_API" + "/place-autocomplete", {query: inputElement.val()} , function(data) {
-        console.log(data.places);
+        datalist.html('');
+        for (i=0; i<data.places.length; i++){
+            datalist.append("<option value='" + data.places[i] + "'>" + inputElement.val() + "</option>");
+        }
     });
 }
 
