@@ -33,6 +33,7 @@ def travel_time():
     departure_time = request.args.get('departure_time', int(time.time()))
     request_fmt = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins={}&destinations={}&traffic_model=best_guess&departure_time={}&key={}'.format(origin, destination, departure_time, GOOGLE_MAPS_API_KEY)
     r = requests.get(request_fmt).json()
+    print(r)
     no_traffic_element = r['rows'][0]['elements'][0]['duration']
     traffic_element = r['rows'][0]['elements'][0]['duration_in_traffic']
     data = {
@@ -51,6 +52,7 @@ def place_complete():
     query = request.args.get('query')
     request_fmt = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query={}&key={}'.format(query, GOOGLE_MAPS_API_KEY)
     r = requests.get(request_fmt).json()
+    print(r)
     places = [p['formatted_address'] for p in r['results']]
     data = {
         'places': places
