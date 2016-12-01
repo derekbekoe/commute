@@ -24,6 +24,7 @@ logging.getLogger('flask_cors').level = logging.DEBUG
 @app.before_request
 def log_request_info():
     app.logger.debug('Headers: %s', request.headers)
+    app.logger.debug('Params: %s', request.args)
     app.logger.debug('Body: %s', request.get_data())
 
 @app.route("/")
