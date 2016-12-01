@@ -4,6 +4,14 @@
 //     // Sorry! No Web Storage support..
 // }
 
+// TODO Set the Location of the API server dynamically...
+function checkTravelTime(travelTime) {
+    $.get( "http://40.83.187.34:81/travel-time", {origin: localStorage.origin, destination: localStorage.destination}, function( data ) {
+        travelTime.text(data.traffic_time_str)
+        setTimeout(function(){ checkTravelTime(travelTime, travelLastUpdated); }, 60000)
+    });
+}
+
 $(document).ready(function() {
     var origin = $('#custom-origin');
     var destination = $('#custom-destination');
@@ -22,8 +30,6 @@ $(document).ready(function() {
          document.location.hash = 'travel'
          travelOrigin.text(localStorage.origin)
          travelDestination.text(localStorage.destination)
-         $.get( "http://40.83.187.34:81/travel-time", {origin: localStorage.origin, destination: localStorage.destination}, function( data ) {
-             travelTime.text(data.traffic_time_str)
-        });
+         checkTravelTime(travelTime)
     });
 });
