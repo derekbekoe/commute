@@ -32,7 +32,7 @@ function checkTravelTime(travelTime, travelOrigin, travelDestination) {
         if (traffic_mins > localStorage.notifyMe) {
             showCommuteNotification(data.traffic_time_str)
         }
-        setTimeout(function(){ checkTravelTime(travelTime, travelOrigin, travelDestination); }, 300000)
+        setTimeout(function(){ checkTravelTime(travelTime, travelOrigin, travelDestination); }, 60000)
     });
 }
 
