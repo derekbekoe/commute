@@ -10,6 +10,7 @@ For the Frontend server the COMMUTE_API env var needs to be set.
 
 ## Creating with az
 
+```
 az vm create -g <RG> -n <NAME> --image UbuntuLTS
 
 az vm open-port -g <RG> -n <NAME>
@@ -25,6 +26,7 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 
 sudo pip install docker-compose
+```
 
 (Use the build docker compose file.)
 
